@@ -1,32 +1,28 @@
-Quasar App Extension Title <- change name
+# System Environment Variables (quasar-app-extension-system-environment-variables)
+
 ===
+> Load environment variables from the system and makes them available through process.env. Works best for building on CI/CD environments
 
-_Be sure to change this readme as appropriate for your app extension._
+In some scenarios like when working in a CI enviroment where we might want to load enviroment variables from the system variables instead of an .env file. This plugin will handle loading system variables as long as they are present in the .env.example file.
 
-_Think about the organization of this file and how the information will be beneficial to the user._
+## Install
 
-> Add a short description of your App Extension. What does it do? How is it beneficial? Why would someone want to use it?
-
-# Install
 ```bash
-quasar ext add my-ext <- change name
+quasar ext add system-environment-variables
 ```
+
 Quasar CLI will retrieve it from NPM and install the extension.
 
-## Prompts
+## Uninstall
 
-> If your app extension uses prompts, explain them here, otherwise remove this section.
-
-# Uninstall
 ```bash
-quasar ext remove my-ext <- change name
+quasar ext remove system-environment-variables
 ```
 
-# Info
-> Add longer information here that will help the user of your app extension.
+## Info
 
-# Other Info
-> Add other information that's not as important to know
+You need to setup a `.env.example` file which can work as a dictionary so the plugin knows which variables to look for and load from the system enviroment, plus it works as a guide for other users letting them know which variables are available.
 
-# Donate
-If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
+## Donate
+
+If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev) or [buy me a beer](https://www.buymeacoffee.com/marcorivm).
