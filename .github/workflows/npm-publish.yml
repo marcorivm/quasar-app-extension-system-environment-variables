@@ -31,7 +31,13 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
+  sleep-while-npm-publishes:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sleep for 30 seconds
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '60s'
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
