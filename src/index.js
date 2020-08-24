@@ -36,7 +36,7 @@ const extendWithDotenv = function (api, conf) {
 
     Object.keys(parsed).forEach(function (key) {
       if (Object.prototype.hasOwnProperty.call(process.env, key)) {
-        target[key] = JSON.stringify(process.env[key])
+        target[key] = process.env[key]
       } else if (debug) {
         log(`"${key}" is already defined in \`process.env\` and will not be overwritten`)
       }
