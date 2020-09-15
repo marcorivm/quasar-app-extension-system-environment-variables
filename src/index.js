@@ -36,7 +36,7 @@ const extendWithDotenv = function (api, conf) {
 
     Object.keys(parsed).forEach(function (key) {
       if (Object.prototype.hasOwnProperty.call(process.env, key)) {
-        target[key] = JSON.stringify(process.env[key])
+        target[key] = process.env[key]
       } else if (debug) {
         log(`"${key}" is already defined in \`process.env\` and will not be overwritten`)
       }
@@ -49,7 +49,7 @@ const extendWithDotenv = function (api, conf) {
 
 module.exports = function (api) {
   // quasar compatibility check
-  api.compatibleWith('@quasar/app', '^1.0.0')
+  api.compatibleWith('@quasar/app', '>2.0.0')
 
   api.extendQuasarConf((conf) => {
     extendWithDotenv(api, conf)
