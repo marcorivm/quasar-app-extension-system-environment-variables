@@ -21,5 +21,8 @@
   },
   "dependencies": {
     "dotenv": "^8.1.0"
+  },
+  "peerDependencies": {
+    "@quasar/app": "1.x"
   }
 }
