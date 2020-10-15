@@ -1,6 +1,6 @@
 {
   "name": "quasar-app-extension-system-environment-variables",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Loads environment variables from the system and makes them available through process.env. Works best for building on CI/CD environments",
   "author": "marcorivm <marcorivm@gmail.com>",
   "license": "MIT",
