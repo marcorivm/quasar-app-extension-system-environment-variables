@@ -7,6 +7,8 @@
 
 In some scenarios like when working in a CI environment where we might want to load environment variables from the system variables instead of an .env file. This plugin will handle loading system variables as long as they are present in the .env.example file.
 
+For Quasar v2.x look at the [2.x branch](https://github.com/marcorivm/quasar-app-extension-system-environment-variables/tree/2.x)
+
 ## Install
 
 ```bash
