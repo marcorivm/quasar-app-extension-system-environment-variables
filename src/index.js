@@ -49,7 +49,8 @@ const extendWithDotenv = function (api, conf) {
 
 module.exports = function (api) {
   // quasar compatibility check
-  api.compatibleWith('@quasar/app', '>2.0.0')
+  api.compatibleWith('quasar', '^2.0.0 || ^2.0.0-beta')
+  api.compatibleWith('@quasar/app', '^2.0.0 || ^3.0.0-beta')
 
   api.extendQuasarConf((conf) => {
     extendWithDotenv(api, conf)
